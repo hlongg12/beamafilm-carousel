@@ -1,0 +1,14 @@
+.movieItem {
+  width: 80%;
+  height: 100%;
+  margin-right: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  color: white;
+}
+
+.movieImage {
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+}

@@ -1,38 +1,40 @@
+
 .list {
   width: 100%;
   margin-top: 10px;
+  overflow: hidden;
 }
 
-.wrapper {
-  position: relative;
-}
-
-.sliderArrow {
-  width: 50px;
-  height: 100%;
-  background-color: rgb(22, 22, 22, 0.5);
+.reloadBtn {
+  background-color: #f26c23;
   color: white;
-  position: absolute;
-  z-index: 99;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  cursor: pointer;
+  font-size: 16px;
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid white;
+  margin-top: 15px;
+  margin-left: 4%;
 }
 
-.sliderArrow .left {
-  left: 0;
+.slick-arrow {
+  color: white;
 }
 
-.sliderArrow .right {
-  right: 0;
+.slick-prev {
+  z-index: 100;
+  left: 20px !important;
+  
 }
 
-.container {
-  margin-left: 50px;
-  display: flex;
-  margin-top: 10px;
-  width: max-content;
-  transform: translateX(0px);
-  transition: all 1s ease;
+.slick-next {
+  z-index: 100;
+  right: 20px !important;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
 }

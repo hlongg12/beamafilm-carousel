@@ -1,0 +1,9 @@
+* {
+  background-color: #222222;
+}
+
+.logo {
+  width: 200px;
+  margin: 2%;
+  object-fit: cover;
+}

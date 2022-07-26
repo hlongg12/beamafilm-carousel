@@ -5,7 +5,7 @@ import MovieList from './components/movieList/MovieList';
 function App() {
   return (
     <div className="App">
-      <h1>Beamafilm Movies</h1>
+      <img className='logo' src="https://beamafilm.com/static/media/logo_large.b4cb3a4d.png" alt="Beamafilm" />
       <MovieList />
     </div>
   );
