@@ -92,6 +92,10 @@ const MOVIE_DATA = [
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
+  
+  useEffect(() => {
+    getMovieData();
+  }, []);
 
   const settings = {
     className: "center",
@@ -101,30 +105,25 @@ const MovieList = () => {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
-    // cssEase: "linear",
   };
 
   const getMovieData = async () => {
     try {
       const response = await axios.get('http://staging-beamafilm.com/api/dev/mock-films');
-      // console.log(response);
+      console.log(response);
       setMovies(response.data.films);
     } catch (error) {
       console.log(error);
     }
   }
 
-  useEffect(() => {
-    getMovieData();
-  }, []);
+  
 
   return (
     <div className='list'>
       <Slider {...settings} >
         {_map(movies, (movie, index) => (
-          <Movie movie={movie} index={index}/>
+          <Movie movie={movie} key={index}/>
         ))}
       </Slider>
       <button className='reloadBtn' onClick={() => getMovieData()}>Reload</button>

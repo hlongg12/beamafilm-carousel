@@ -1,12 +1,13 @@
 import React from 'react';
 import "./movie.css";
+import _get from "lodash/get";
 
-const Movie = ({ movie, index }) => {
+const Movie = ({ movie }) => {
   return (
     <div className="movieItem">
       <div className='movieInfo'>
-        <img className='movieImage' src={movie.image_url} alt={movie.title} />
-        <h3>{movie.title}</h3>
+        <img className='movieImage' src={_get(movie, "image_url")} alt={_get(movie, "title")} />
+        <h3>{_get(movie, "title", "")}</h3>
       </div>  
     </div>
   )
